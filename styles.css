@@ -12,6 +12,11 @@ body {
   height: 100vh; /* Preenche a altura total da viewport */
   margin: 0; /* Remove a margem padrão */
   padding: 0; /* Remove o padding padrão */
+  /* Define a imagem de fundo e suas propriedades */
+  background-image: url("paisagem foto.jpg"); /* Caminho da imagem */
+  background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-position: center; /* Centraliza a imagem */
 }
 
 /* Estiliza os títulos h1 */
