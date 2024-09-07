@@ -9,7 +9,8 @@ function pesquisar() {
   let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
   if (campoPesquisa == "") {
-    section.innerHTML = "Nada foi encontrado. Digite o tipo de fotografia ou descrição que deseja";
+    section.innerHTML =
+      "Nada foi encontrado. Digite o tipo de fotografia ou descrição que deseja";
     return;
   }
 
@@ -53,8 +54,8 @@ function pesquisar() {
     }
   }
 
-  if (!resultado){
-    resultados = "<p> Nada foi encontrado.</p>"
+  if (!resultados) {
+    resultados = "<p> Nada foi encontrado.</p>";
   }
 
   section.innerHTML = resultados;

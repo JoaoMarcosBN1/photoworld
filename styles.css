@@ -1,9 +1,9 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&display=swap");
 
 /* Estiliza o corpo da página */
 body {
-  font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+  font-family: "Montserrat", sans-serif; /* Define a fonte padrão */
   background-color: #a9c9a9; /* Cor de fundo da página */
   display: flex; /* Usa Flexbox para layout */
   flex-direction: column; /* Alinha os itens na vertical */
@@ -13,7 +13,7 @@ body {
   margin: 0; /* Remove a margem padrão */
   padding: 0; /* Remove o padding padrão */
   /* Define a imagem de fundo e suas propriedades */
-  background-image: url("paisagem foto.jpg"); /* Caminho da imagem */
+  background-image: url("assents/background.jpg"); /* Caminho da imagem */
   background-size: cover; /* Ajusta a imagem para cobrir toda a área */
   background-repeat: no-repeat; /* Impede a repetição da imagem */
   background-position: center; /* Centraliza a imagem */
@@ -22,7 +22,7 @@ body {
 /* Estiliza os títulos h1 */
 h1 {
   font-size: 2.5rem; /* Tamanho da fonte */
-  color: #000000; /* Cor do texto */
+  color: #a9c9a9; /* Cor do texto */
   text-align: center; /* Alinha o texto ao centro */
   letter-spacing: 0.2rem; /* Espaçamento entre letras */
 }
@@ -92,7 +92,7 @@ section button:hover {
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
   text-decoration: none; /* Remove o sublinhado padrão dos links */
-  color: #30475e; /* Cor do texto dos links */
+  color: #1960a7; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
@@ -108,7 +108,7 @@ section button:hover {
 
 /* Estiliza o rodapé da página */
 footer {
-  background-color: #f5f7f8; /* Cor de fundo do rodapé */
+  background-color: #a9c9a9; /* Cor de fundo do rodapé */
   color: #45474b; /* Cor do texto */
   text-align: center; /* Alinha o texto ao centro */
   padding: 0; /* Espaçamento interno */
