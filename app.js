@@ -6,9 +6,22 @@ function pesquisar() {
   // Obtém a referência para a seção HTML onde os resultados serão exibidos.
   // Essa seção deve ter um ID "resultados-pesquisa" no HTML.
 
+  let campoPesquisa = document.getElementById("campo-pesquisa").value;
+
+  if (campoPesquisa == "") {
+    section.innerHTML = "Nada foi encontrado. Digite o tipo de fotografia ou descrição que deseja";
+    return;
+  }
+
+  campoPesquisa = campoPesquisa.toLowerCase();
+
   let resultados = "";
   // Inicializa uma string vazia para armazenar o HTML dos resultados.
   // Essa string será preenchida no loop a seguir e, por fim, inserida na seção HTML.
+
+  let titulo = "";
+  let descricao = "";
+  let tags = "";
 
   for (let dado of dados) {
     // Itera sobre cada item (objeto) do array "dados".
@@ -16,8 +29,16 @@ function pesquisar() {
     // - titulo: o título do resultado
     // - descricao: uma breve descrição
     // - link: um link para mais informações
+    titulo = dado.titulo.toLowerCase();
+    descricao = dado.descricao.toLowerCase();
+    tags = dado.tags.toLowerCase();
 
-    resultados += `
+    if (
+      titulo.includes(campoPesquisa) ||
+      descricao.includes(campoPesquisa) ||
+      tags.includes(campoPesquisa)
+    ) {
+      resultados += `
       <div class="item-resultado">
         <h2>
           <a href="#" target="_blank">${dado.titulo}</a>
@@ -26,9 +47,14 @@ function pesquisar() {
         <a href=${dado.link} target="_blank">Algumas imagens</a>
       </div>
     `;
-    // Constrói uma string de HTML para cada resultado, formatando-a como uma div com um título, descrição e link.
-    // A crase (`) permite a interpolação de variáveis dentro de strings (template literals).
-    // A propriedade "target="_blank"" faz com que o link abra em uma nova aba do navegador.
+      // Constrói uma string de HTML para cada resultado, formatando-a como uma div com um título, descrição e link.
+      // A crase (`) permite a interpolação de variáveis dentro de strings (template literals).
+      // A propriedade "target="_blank"" faz com que o link abra em uma nova aba do navegador.
+    }
+  }
+
+  if (!resultado){
+    resultados = "<p> Nada foi encontrado.</p>"
   }
 
   section.innerHTML = resultados;
